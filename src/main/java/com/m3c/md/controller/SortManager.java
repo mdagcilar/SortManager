@@ -3,21 +3,28 @@ package com.m3c.md.controller;
 import com.m3c.md.display.DisplayManager;
 import com.m3c.md.sorters.Sorter;
 
-import java.util.Arrays;
 import java.util.Random;
 
 public class SortManager {
 
     public void sortArray() {
-        Integer[] arrayToSort = createIntegerArray(1000);
-        Sorter sorter = SortFactory.getInstance();
+        DisplayManager displayManager = new DisplayManager();
 
-        DisplayManager.displayUnsortedArray(sorter.toString(), arrayToSort);
 
-        long startTime = System.nanoTime();
-        sorter.sort(arrayToSort);
-        long endTime = System.nanoTime();
-        DisplayManager.displaySortedArray(arrayToSort, (endTime - startTime));
+        try {
+            Sorter sorter = SortFactory.getInstance();
+            Integer[] arrayToSort = createIntegerArray(10);
+
+            DisplayManager.displayUnsortedArray(sorter.toString(), arrayToSort);
+
+            sorter.sort(arrayToSort);
+
+            DisplayManager.displaySortedArray(arrayToSort);
+        } catch (SortManagerException e) {
+            displayManager.displayExceptionMessage(e.getMessage());
+        }
+
+
     }
 
 

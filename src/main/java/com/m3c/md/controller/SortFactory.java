@@ -5,17 +5,20 @@ import com.m3c.md.sorters.MergeSort;
 import com.m3c.md.sorters.QuickSort;
 import com.m3c.md.sorters.Sorter;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
 
 public class SortFactory {
 
-    public static Sorter getInstance() {
-        try {
+    private static final String TYPE_NOT_FOUND = "Sorry - this sorter type is not available";
+    private static final String CONFIG_ERROR = "Sorry - Configuration file not found";
+
+    public static Sorter getInstance() throws SortManagerException {
+        try (FileReader fr = new FileReader("resources/factory.properties")) {
+
             Properties properties = new Properties();
-            properties.load(new FileReader("resources/factory.properties"));
+            properties.load(fr);
 
             String sorter = properties.getProperty("sorter");
 
@@ -27,14 +30,10 @@ public class SortFactory {
                 case "quick":
                     return new QuickSort();
                 default:
-                    //TODO: throw new exception
+                    throw new SortManagerException(TYPE_NOT_FOUND);
             }
-
-        } catch (FileNotFoundException e) {
-            System.out.println(e.getMessage());
         } catch (IOException e) {
-            System.out.println(e.getMessage());
+            throw new SortManagerException(CONFIG_ERROR);
         }
-        return null;
     }
 }
