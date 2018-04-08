@@ -1,4 +1,4 @@
-package com.m3c.md.sorters;
+package com.m3c.md.model;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,7 +9,7 @@ import static org.junit.Assert.*;
 
 public class QuickSortTest {
 
-    Sorter sorter;
+    private Sorter sorter;
 
     @Before
     public void setup(){

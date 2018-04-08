@@ -1,9 +1,9 @@
 package com.m3c.md.controller;
 
-import com.m3c.md.sorters.BubbleSort;
-import com.m3c.md.sorters.MergeSort;
-import com.m3c.md.sorters.QuickSort;
-import com.m3c.md.sorters.Sorter;
+import com.m3c.md.model.BubbleSort;
+import com.m3c.md.model.MergeSort;
+import com.m3c.md.model.QuickSort;
+import com.m3c.md.model.Sorter;
 
 import java.io.FileReader;
 import java.io.IOException;

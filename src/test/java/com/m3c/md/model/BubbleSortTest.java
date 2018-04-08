@@ -1,4 +1,4 @@
-package com.m3c.md.sorters;
+package com.m3c.md.model;
 
 import com.m3c.md.controller.SortFactory;
 import com.m3c.md.controller.SortManagerException;
@@ -13,13 +13,11 @@ import static org.junit.Assert.*;
 public class BubbleSortTest {
 
     private static Sorter sorter;
-    private int[] unsortArray;
 
     @BeforeClass
     public static void setClass() {
-        SortFactory factory = new SortFactory();
         try {
-            sorter = factory.getInstance();
+            sorter = SortFactory.getInstance();
         } catch (SortManagerException e) {
             e.printStackTrace();
         }

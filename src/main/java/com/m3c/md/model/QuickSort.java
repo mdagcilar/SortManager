@@ -1,17 +1,15 @@
-package com.m3c.md.sorters;
+package com.m3c.md.model;
 
 import java.util.Arrays;
 
 /**
  * Implementation of the QuickSort algorithm
  * <p>
- * This sort algorithm takes last element as the pivot,
- * places the pivot element at its correct
- * position in sorted array, and places all
- * smaller (smaller than pivot) to left of
- * pivot and all greater elements to right
+ * This sort algorithm takes last element as the pivot, places the pivot element
+ * at its correct position in sorted array, and places all smaller (smaller than pivot)
+ * to left of pivot and all greater elements to right
  *
- * @author Metin Dagcila
+ * @author Metin Dagcilar
  * @version 1.0
  * @since 2018-04-03
  */
@@ -23,7 +21,7 @@ public class QuickSort implements Sorter {
         sort(t, 0, t.length - 1);
     }
 
-    public <T extends Comparable<T>> void sort(T[] inputArray, int low, int high) {
+    private <T extends Comparable<T>> void sort(T[] inputArray, int low, int high) {
 
         if (low < high) {
             int pi = partition(inputArray, low, high);

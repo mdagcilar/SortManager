@@ -1,9 +1,9 @@
-package com.m3c.md.sorters;
+package com.m3c.md.model;
 import java.util.Arrays;
 
 /** Implementation of the BubbleSort algorithm
  *
- * @author  Metin Dagcila
+ * @author  Metin Dagcilar
  * @version 1.0
  * @since   2018-04-03
  */

@@ -1,4 +1,4 @@
-package com.m3c.md.sorters;
+package com.m3c.md.model;
 
 public interface Sorter {
 
