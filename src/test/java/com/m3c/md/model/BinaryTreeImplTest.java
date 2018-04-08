@@ -197,13 +197,12 @@ public class BinaryTreeImplTest {
     }
 
     @Test
-    public void sortRandom(){
+    public void sortRandom() {
         Integer[] arr = {7, 2, 3, 9, 4};
 
-        Sorter sorter = new BinaryTreeImpl(7);
+        Sorter sorter = new BinaryTreeImpl(arr);
         sorter.sort(arr);
 
         assertEquals("[2, 3, 4, 7, 9]", Arrays.toString(arr));
     }
-
 }

@@ -21,9 +21,22 @@ public class BinaryTreeImpl implements BinaryTree, Sorter {
     private List<Integer> sortedTreeDesc = new ArrayList<>();
 
 
-    // Constructor to initialise the value of Root.
+    // Constructor to initialise the value of Root
     BinaryTreeImpl(final int rootValue) {
         root = new Node(rootValue);
+    }
+
+    // Constructor to initialise a Binary tree with an array of elements
+    BinaryTreeImpl(Integer[] elements) {
+        root = new Node(elements[0]);
+
+        int[] elementsToAdd = new int[elements.length - 1];
+
+        for (int i = 1; i < elements.length; i++) {
+            elementsToAdd[i - 1] = elements[i];
+        }
+
+        addElements(elementsToAdd);
     }
 
     // Returns the value of the root Node
@@ -185,21 +198,15 @@ public class BinaryTreeImpl implements BinaryTree, Sorter {
 
 
     /**
-     * Given an array, adds all the elements to a BinaryTree, and sorts the elements
-     * using getSortedTreeAsc() method.
+     * Sorts elements using getSortedTreeAsc() and converts it to an array.
+     * <p>
+     * Returns an array containing all of the elements in this list in proper sequence
+     * (from first to last element) applied to the sorted list - getSortedTreeAsc().
      *
      * @param t - array of type T
      */
     @Override
     public <T extends Comparable<T>> void sort(T[] t) {
-        int[] elements = new int[t.length - 1];
-
-        for (int i = 1; i < t.length; i++) {
-            elements[i - 1] = (Integer) t[i];
-        }
-
-        addElements(elements);
-
         getSortedTreeAsc().toArray(t);
     }
 
