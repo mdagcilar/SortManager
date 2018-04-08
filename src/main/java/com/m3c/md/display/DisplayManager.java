@@ -20,4 +20,8 @@ public class DisplayManager {
     public static <T extends Comparable<T>> void displaySortedArray(T[] array) {
         System.out.println("Sorted Array: " + Arrays.toString(array));
     }
+
+    public void displayExceptionMessage(String message) {
+        System.out.println(message);
+    }
 }

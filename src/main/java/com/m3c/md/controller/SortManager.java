@@ -6,6 +6,7 @@ import com.m3c.md.model.Sorter;
 import java.util.Arrays;
 import java.util.Random;
 
+
 /**
  * SortManager
  *
@@ -16,14 +17,21 @@ import java.util.Random;
 
 public class SortManager {
 
-    public void sortArray() throws SortManagerException {
-        Sorter sorter = SortFactory.getInstance();
-        Integer[] arrayToSort = createIntegerArray(10);
 
-        DisplayManager.displayUnsortedArray(sorter.toString(), arrayToSort);
-        sorter.sort(arrayToSort);
+    public void sortArray() {
+        DisplayManager displayManager = new DisplayManager();
 
-        DisplayManager.displaySortedArray(arrayToSort);
+        try {
+            Sorter sorter = SortFactory.getInstance();
+            Integer[] arrayToSort = createIntegerArray(10);
+
+            DisplayManager.displayUnsortedArray(sorter.toString(), arrayToSort);
+            sorter.sort(arrayToSort);
+
+            DisplayManager.displaySortedArray(arrayToSort);
+        } catch (SortManagerException e) {
+            displayManager.displayExceptionMessage(e.getMessage());
+        }
     }
 
 
@@ -36,6 +44,7 @@ public class SortManager {
         }
         return unsortedArray;
     }
+
 
     // *************************************************************************
     // Methods for Sorting with Strings

@@ -7,6 +7,7 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Arrays;
+import java.util.Random;
 
 import static org.junit.Assert.*;
 
@@ -22,6 +23,8 @@ import static org.junit.Assert.*;
 public class SortTest {
 
     private static Sorter sorter;
+    private Integer[] unsortedArray, sortedArray;
+    private Random random = new Random();
 
     @BeforeClass
     public static void setClass() throws SortManagerException {
@@ -39,16 +42,19 @@ public class SortTest {
         }
 
         // create random array
+        unsortedArray = new Integer[10];
+        for (int i = 0; i < 10; i++) {
+            unsortedArray[i] = random.nextInt(10 * 10) + 1;
+        }
+        sortedArray = Arrays.copyOf(unsortedArray, unsortedArray.length);
     }
-
 
     @Test
     public void sortRandom() {
-        Integer[] arr = {7, 2, 3, 9, 4};
+        Arrays.sort(sortedArray);
+        sorter.sort(unsortedArray);
 
-        sorter.sort(arr);
-
-        assertEquals("[2, 3, 4, 7, 9]", Arrays.toString(arr));
+        assertArrayEquals(sortedArray, unsortedArray);
     }
 
     @Test
