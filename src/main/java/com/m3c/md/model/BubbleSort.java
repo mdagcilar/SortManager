@@ -1,10 +1,11 @@
 package com.m3c.md.model;
 
-/** Implementation of the BinaryTree data-structure
+/**
+ * Implementation of the BinaryTree data-structure
  *
- * @author  Metin Dagcilar
+ * @author Metin Dagcilar
  * @version 1.0
- * @since   2018-04-03
+ * @since 2018-04-03
  */
 
 public class BubbleSort implements Sorter {
@@ -28,12 +29,12 @@ public class BubbleSort implements Sorter {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Bubble Sorter";
+    }
+
 //    public <T extends Comparable<T>> void print(T[] arr) {
 //        System.out.println(Arrays.toString(arr));
 //    }
-
-    @Override
-    public String toString(){
-        return "Bubble Sorter";
-    }
 }

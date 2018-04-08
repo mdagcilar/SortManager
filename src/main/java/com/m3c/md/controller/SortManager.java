@@ -16,20 +16,14 @@ import java.util.Random;
 
 public class SortManager {
 
-    public void sortArray() {
-        DisplayManager displayManager = new DisplayManager();
+    public void sortArray() throws SortManagerException {
+        Sorter sorter = SortFactory.getInstance();
+        Integer[] arrayToSort = createIntegerArray(10);
 
-        try {
-            Sorter sorter = SortFactory.getInstance();
-            Integer[] arrayToSort = createIntegerArray(10);
+        DisplayManager.displayUnsortedArray(sorter.toString(), arrayToSort);
+        sorter.sort(arrayToSort);
 
-            DisplayManager.displayUnsortedArray(sorter.toString(), arrayToSort);
-            sorter.sort(arrayToSort);
-
-            DisplayManager.displaySortedArray(arrayToSort);
-        } catch (SortManagerException e) {
-            displayManager.displayExceptionMessage(e.getMessage());
-        }
+        DisplayManager.displaySortedArray(arrayToSort);
     }
 
 

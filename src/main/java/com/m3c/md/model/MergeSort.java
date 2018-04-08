@@ -5,9 +5,9 @@ import java.util.Arrays;
 /**
  * Implementation of the MergeSort algorithm
  *
- * @author  Metin Dagcilar
+ * @author Metin Dagcilar
  * @version 1.0
- * @since   2018-04-03
+ * @since 2018-04-03
  */
 
 public class MergeSort implements Sorter {
@@ -36,12 +36,13 @@ public class MergeSort implements Sorter {
         }
     }
 
+    @Override
+    public String toString() {
+        return "Merge Sorter";
+    }
+
 //    public <T extends Comparable<T>> void print(T[] arr) {
 //        System.out.println(Arrays.toString(arr));
 //    }
 
-    @Override
-    public String toString(){
-        return "Merge Sorter";
-    }
 }

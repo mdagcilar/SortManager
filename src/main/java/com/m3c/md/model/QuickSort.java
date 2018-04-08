@@ -49,12 +49,12 @@ public class QuickSort implements Sorter {
         return i + 1;
     }
 
-//    public <T extends Comparable<T>> void print(T[] arr) {
-//        System.out.println(Arrays.toString(arr));
-//    }
-
     @Override
     public String toString() {
         return "Quick Sorter";
     }
+
+//    public <T extends Comparable<T>> void print(T[] arr) {
+//        System.out.println(Arrays.toString(arr));
+//    }
 }
