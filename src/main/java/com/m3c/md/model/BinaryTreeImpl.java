@@ -227,7 +227,7 @@ public class BinaryTreeImpl implements BinaryTree, Sorter {
 
     @Override
     public String toString() {
-        return "BinaryTree Sorted";
+        return "BinaryTree Sorter";
     }
 
     /**

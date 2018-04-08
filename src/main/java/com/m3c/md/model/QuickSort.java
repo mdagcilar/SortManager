@@ -1,7 +1,5 @@
 package com.m3c.md.model;
 
-import java.util.Arrays;
-
 /**
  * Implementation of the QuickSort algorithm
  * <p>
@@ -51,9 +49,9 @@ public class QuickSort implements Sorter {
         return i + 1;
     }
 
-    public <T extends Comparable<T>> void print(T[] arr) {
-        System.out.println(Arrays.toString(arr));
-    }
+//    public <T extends Comparable<T>> void print(T[] arr) {
+//        System.out.println(Arrays.toString(arr));
+//    }
 
     @Override
     public String toString() {

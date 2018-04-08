@@ -2,6 +2,14 @@ package com.m3c.md.display;
 
 import java.util.Arrays;
 
+/**
+ * DisplayManager, responsible for displaying information to the user
+ *
+ * @author Metin Dagcilar
+ * @version 1.0
+ * @since 2018-04-03
+ */
+
 public class DisplayManager {
 
     public static <T extends Comparable<T>> void displayUnsortedArray(String sorter, T[] array) {

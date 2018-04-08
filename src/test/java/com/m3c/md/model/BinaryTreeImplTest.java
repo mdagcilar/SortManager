@@ -10,6 +10,14 @@ import java.util.List;
 
 import static org.junit.Assert.*;
 
+/**
+ * BinaryTreeImplTest JUnit test cases
+ *
+ * @author Metin Dagcilar
+ * @version 1.0
+ * @since 2018-04-03
+ */
+
 public class BinaryTreeImplTest {
 
     private static BinaryTree binaryTree;

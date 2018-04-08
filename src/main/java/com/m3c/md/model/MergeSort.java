@@ -36,9 +36,9 @@ public class MergeSort implements Sorter {
         }
     }
 
-    public <T extends Comparable<T>> void print(T[] arr) {
-        System.out.println(Arrays.toString(arr));
-    }
+//    public <T extends Comparable<T>> void print(T[] arr) {
+//        System.out.println(Arrays.toString(arr));
+//    }
 
     @Override
     public String toString(){

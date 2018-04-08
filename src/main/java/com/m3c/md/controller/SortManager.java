@@ -6,6 +6,14 @@ import com.m3c.md.model.Sorter;
 import java.util.Arrays;
 import java.util.Random;
 
+/**
+ * SortManager
+ *
+ * @author Metin Dagcilar
+ * @version 1.0
+ * @since 2018-04-03
+ */
+
 public class SortManager {
 
     public void sortArray() {

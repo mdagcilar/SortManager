@@ -1,7 +1,6 @@
 package com.m3c.md.model;
-import java.util.Arrays;
 
-/** Implementation of the BubbleSort algorithm
+/** Implementation of the BinaryTree data-structure
  *
  * @author  Metin Dagcilar
  * @version 1.0
@@ -29,9 +28,9 @@ public class BubbleSort implements Sorter {
         }
     }
 
-    public <T extends Comparable<T>> void print(T[] arr) {
-        System.out.println(Arrays.toString(arr));
-    }
+//    public <T extends Comparable<T>> void print(T[] arr) {
+//        System.out.println(Arrays.toString(arr));
+//    }
 
     @Override
     public String toString(){

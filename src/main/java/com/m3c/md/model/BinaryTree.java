@@ -4,6 +4,14 @@ import com.m3c.md.controller.ElementNotFoundException;
 
 import java.util.List;
 
+/**
+ * BinaryTree interface
+ *
+ * @author Metin Dagcilar
+ * @version 1.0
+ * @since 2018-04-03
+ */
+
 public interface BinaryTree {
 
     int getRootElement();
