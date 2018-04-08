@@ -10,24 +10,33 @@ import java.util.Arrays;
 
 import static org.junit.Assert.*;
 
+/**
+ * Implementation of the Binary Tree data structure
+ *
+ * @author Metin Dagcilar
+ * @version 1.0
+ * @since 2018-04-03
+ */
+
 public class BubbleSortTest {
 
     private static Sorter sorter;
 
     @BeforeClass
-    public static void setClass() {
-        try {
-            sorter = SortFactory.getInstance();
-        } catch (SortManagerException e) {
-            e.printStackTrace();
-        }
+    public static void setClass() throws SortManagerException {
+        sorter = SortFactory.getInstance();
 
         System.out.println("Testing using the " + sorter.toString());
     }
 
-
     @Before
     public void setup() {
+        // if sorter is an instance of BinaryTree, create a new instance
+        // each time. To ensure nodes have been removed from previous tests.
+        if (sorter.getClass() == BinaryTreeImpl.class) {
+            sorter = new BinaryTreeImpl();
+        }
+
         // create random array
     }
 

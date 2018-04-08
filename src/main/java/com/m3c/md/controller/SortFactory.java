@@ -1,13 +1,16 @@
 package com.m3c.md.controller;
 
-import com.m3c.md.model.BubbleSort;
-import com.m3c.md.model.MergeSort;
-import com.m3c.md.model.QuickSort;
-import com.m3c.md.model.Sorter;
+import com.m3c.md.model.*;
 
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Properties;
+
+/**
+ * Author: Metin Dagcilar
+ * Date: 06/04/18
+ * Description: SortFactory
+ */
 
 public class SortFactory {
 
@@ -29,6 +32,8 @@ public class SortFactory {
                     return new MergeSort();
                 case "quick":
                     return new QuickSort();
+                case "binarytree":
+                    return new BinaryTreeImpl();
                 default:
                     throw new SortManagerException(TYPE_NOT_FOUND);
             }
