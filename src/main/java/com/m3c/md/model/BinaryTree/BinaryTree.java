@@ -1,6 +1,4 @@
-package com.m3c.md.model;
-
-import com.m3c.md.controller.ElementNotFoundException;
+package com.m3c.md.model.BinaryTree;
 
 import java.util.List;
 
@@ -14,7 +12,7 @@ import java.util.List;
 
 public interface BinaryTree {
 
-    int getRootElement() throws ElementNotFoundException;
+    int getRootElement();
 
     int getNumberOfElements();
 

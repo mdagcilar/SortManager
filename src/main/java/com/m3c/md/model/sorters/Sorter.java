@@ -1,4 +1,4 @@
-package com.m3c.md.model;
+package com.m3c.md.model.sorters;
 
 /**
  * Sorter interface

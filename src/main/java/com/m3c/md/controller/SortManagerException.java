@@ -10,7 +10,7 @@ package com.m3c.md.controller;
 
 public class SortManagerException extends Exception {
 
-    SortManagerException(String message) {
+    public SortManagerException(String message) {
         super(message);
     }
 }

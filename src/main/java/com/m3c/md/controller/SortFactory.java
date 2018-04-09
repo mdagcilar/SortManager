@@ -1,6 +1,6 @@
 package com.m3c.md.controller;
 
-import com.m3c.md.model.*;
+import com.m3c.md.model.sorters.*;
 
 import java.io.FileReader;
 import java.io.IOException;
@@ -35,7 +35,7 @@ public class SortFactory {
                 case "quick":
                     return new QuickSort();
                 case "binarytree":
-                    return new BinaryTreeImpl();
+                    return new BinaryTreeSorter();
                 default:
                     throw new SortManagerException(TYPE_NOT_FOUND);
             }

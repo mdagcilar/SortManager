@@ -1,6 +1,8 @@
-package com.m3c.md.model;
+package com.m3c.md.model.BinaryTree;
 
-import com.m3c.md.controller.ElementNotFoundException;
+import com.m3c.md.model.BinaryTree.BinaryTree;
+import com.m3c.md.model.BinaryTree.BinaryTreeImpl;
+import com.m3c.md.model.BinaryTree.ElementNotFoundException;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -32,7 +34,7 @@ public class BinaryTreeImplTest {
 
     // Testing the value is correct for the getRootElement() method
     @Test
-    public void getRootElement() throws ElementNotFoundException {
+    public void getRootElement() {
         binaryTree = new BinaryTreeImpl(8);
         assertEquals(8, binaryTree.getRootElement());
     }
@@ -203,26 +205,21 @@ public class BinaryTreeImplTest {
 
         assertEquals(expected, binaryTree.getSortedTreeDesc());
     }
+//
+//    @Test
+//    public void sortRandom() {
+//        Integer[] arr = {7, 2, 3, 9, 4};
+//
+//        Sorter sorter = new BinaryTreeImpl(arr);
+//        sorter.sort(arr);
+//
+//        assertEquals("[2, 3, 4, 7, 9]", Arrays.toString(arr));
+//    }
 
-    @Test
-    public void sortRandom() {
-        Integer[] arr = {7, 2, 3, 9, 4};
-
-        Sorter sorter = new BinaryTreeImpl(arr);
-        sorter.sort(arr);
-
-        assertEquals("[2, 3, 4, 7, 9]", Arrays.toString(arr));
-    }
-
-    @Test(expected = ElementNotFoundException.class)
-    public void testEmptyConstructor() throws ElementNotFoundException {
-        binaryTree = new BinaryTreeImpl();
-        binaryTree.getRootElement();
-    }
-
-    @Test
-    public void testToString() {
-        binaryTree.toString();
-        assertEquals(binaryTree.toString(), "BinaryTree Sorter");
-    }
+//
+//    @Test
+//    public void testToString() {
+//        binaryTree.toString();
+//        assertEquals(binaryTree.toString(), "BinaryTree Sorter");
+//    }
 }

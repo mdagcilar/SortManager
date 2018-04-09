@@ -1,4 +1,6 @@
-package com.m3c.md.model;
+package com.m3c.md.model.sorters;
+
+import org.apache.log4j.Logger;
 
 import java.util.Arrays;
 
@@ -11,6 +13,8 @@ import java.util.Arrays;
  */
 
 public class MergeSort implements Sorter {
+
+    private static org.apache.log4j.Logger logger = Logger.getLogger(MergeSort.class);
 
     public <T extends Comparable<T>> void sort(T[] inputArray) {
         if (inputArray == null || inputArray.length < 2) return;

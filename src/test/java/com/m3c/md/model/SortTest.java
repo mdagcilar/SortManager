@@ -2,6 +2,8 @@ package com.m3c.md.model;
 
 import com.m3c.md.controller.SortFactory;
 import com.m3c.md.controller.SortManagerException;
+import com.m3c.md.model.sorters.BinaryTreeSorter;
+import com.m3c.md.model.sorters.Sorter;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -37,8 +39,8 @@ public class SortTest {
     public void setup() {
         // if sorter is an instance of BinaryTree, create a new instance
         // each time. To ensure nodes have been removed from previous tests.
-        if (sorter.getClass() == BinaryTreeImpl.class) {
-            sorter = new BinaryTreeImpl();
+        if (sorter.getClass() == BinaryTreeSorter.class) {
+            sorter = new BinaryTreeSorter();
         }
 
         // create random array
@@ -129,7 +131,7 @@ public class SortTest {
     @Test
     public void sortRandomString() {
         //TODO: temporarily ignore String Test cases for BinaryTrees. Need to fix this
-        if (sorter.getClass() == BinaryTreeImpl.class) {
+        if (sorter.getClass() == BinaryTreeSorter.class) {
             return;
         }
 
@@ -143,7 +145,7 @@ public class SortTest {
     @Test
     public void alreadySortedChar() {
         //TODO: temporarily ignore String Test cases for BinaryTrees. Need to fix this
-        if (sorter.getClass() == BinaryTreeImpl.class) {
+        if (sorter.getClass() == BinaryTreeSorter.class) {
             return;
         }
 
@@ -157,7 +159,7 @@ public class SortTest {
     @Test
     public void reverseChar() {
         //TODO: temporarily ignore String Test cases for BinaryTrees. Need to fix this
-        if (sorter.getClass() == BinaryTreeImpl.class) {
+        if (sorter.getClass() == BinaryTreeSorter.class) {
             return;
         }
 

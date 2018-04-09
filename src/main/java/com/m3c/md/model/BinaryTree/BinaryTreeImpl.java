@@ -1,7 +1,4 @@
-package com.m3c.md.model;
-
-import com.m3c.md.controller.ElementNotFoundException;
-import com.m3c.md.display.DisplayManager;
+package com.m3c.md.model.BinaryTree;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -14,40 +11,22 @@ import java.util.List;
 
 //TODO: add remove method
 
-public class BinaryTreeImpl implements BinaryTree, Sorter {
+public class BinaryTreeImpl implements BinaryTree {
 
     private Node root;
     private int numberOfNodes = 1;      // initialed to 1 because of root node.
     private List<Integer> sortedTreeAsc = new ArrayList<>();
     private List<Integer> sortedTreeDesc = new ArrayList<>();
 
-    // default constructor with no parameters
-    public BinaryTreeImpl() {
-    }
 
     // Constructor to initialise the value of Root
-    BinaryTreeImpl(final int rootValue) {
+    public BinaryTreeImpl(final int rootValue) {
         root = new Node(rootValue);
     }
 
-    // Constructor to initialise a Binary tree with an array of elements
-    BinaryTreeImpl(Integer[] elements) {
-        root = new Node(elements[0]);
-
-        int[] elementsToAdd = new int[elements.length - 1];
-
-        for (int i = 1; i < elements.length; i++) {
-            elementsToAdd[i - 1] = elements[i];
-        }
-
-        addElements(elementsToAdd);
-    }
 
     // Returns the value of the root Node
-    public int getRootElement() throws ElementNotFoundException{
-        if (root == null)
-            throw new ElementNotFoundException();
-
+    public int getRootElement() {
         return root.getValue();
     }
 
@@ -201,37 +180,6 @@ public class BinaryTreeImpl implements BinaryTree, Sorter {
             sortedTreeDesc.add(node.getValue());
             getSortedTreeDescHelper(node.getLeftChild());
         }
-    }
-
-
-    /**
-     * Sorts elements using getSortedTreeAsc() and converts it to an array.
-     * <p>
-     * Returns an array containing all of the elements in this list in proper sequence
-     * (from first to last element) applied to the sorted list - getSortedTreeAsc().
-     *
-     * @param elements - array of type T
-     */
-    @Override
-    public <T extends Comparable<T>> void sort(T[] elements) {
-        if (elements.length == 0) return;
-
-        root = new Node((Integer) elements[0]);
-
-        int[] elementsToAdd = new int[elements.length - 1];
-
-        for (int i = 1; i < elements.length; i++) {
-            elementsToAdd[i - 1] = (Integer) elements[i];
-        }
-
-        addElements(elementsToAdd);
-
-        getSortedTreeAsc().toArray(elements);
-    }
-
-    @Override
-    public String toString() {
-        return "BinaryTree Sorter";
     }
 
     /**

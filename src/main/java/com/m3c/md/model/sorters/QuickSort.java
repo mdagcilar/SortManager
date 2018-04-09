@@ -1,4 +1,6 @@
-package com.m3c.md.model;
+package com.m3c.md.model.sorters;
+
+import org.apache.log4j.Logger;
 
 /**
  * Implementation of the QuickSort algorithm
@@ -13,6 +15,8 @@ package com.m3c.md.model;
  */
 
 public class QuickSort implements Sorter {
+
+    private static org.apache.log4j.Logger logger = Logger.getLogger(QuickSort.class);
 
     @Override
     public <T extends Comparable<T>> void sort(T[] t) {

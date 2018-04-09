@@ -1,7 +1,7 @@
 package com.m3c.md.controller;
 
 import com.m3c.md.display.DisplayManager;
-import com.m3c.md.model.Sorter;
+import com.m3c.md.model.sorters.Sorter;
 
 import java.util.Arrays;
 import java.util.Random;

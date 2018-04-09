@@ -1,4 +1,4 @@
-package com.m3c.md.controller;
+package com.m3c.md.model.BinaryTree;
 
 /**
  * ElementNotFoundException
@@ -10,11 +10,7 @@ package com.m3c.md.controller;
 
 public class ElementNotFoundException extends Exception {
 
-    public ElementNotFoundException(String message) {
+    ElementNotFoundException(String message) {
         super(message);
-    }
-
-    public ElementNotFoundException() {
-        super();
     }
 }

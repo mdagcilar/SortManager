@@ -1,4 +1,6 @@
-package com.m3c.md.model;
+package com.m3c.md.model.sorters;
+
+import org.apache.log4j.Logger;
 
 /**
  * Implementation of the BinaryTree data-structure
@@ -9,6 +11,8 @@ package com.m3c.md.model;
  */
 
 public class BubbleSort implements Sorter {
+
+    private static org.apache.log4j.Logger logger = Logger.getLogger(BubbleSort.class);
 
     public <T extends Comparable<T>> void sort(T[] inputArray) {
         boolean swapped = false;
