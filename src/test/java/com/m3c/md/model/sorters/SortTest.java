@@ -1,7 +1,7 @@
 package com.m3c.md.model;
 
 import com.m3c.md.controller.SortFactory;
-import com.m3c.md.controller.SortManagerException;
+import com.m3c.md.model.sorters.SortManagerException;
 import com.m3c.md.model.sorters.BinaryTreeSorter;
 import com.m3c.md.model.sorters.Sorter;
 import org.junit.Before;

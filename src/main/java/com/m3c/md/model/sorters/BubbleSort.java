@@ -31,6 +31,7 @@ public class BubbleSort implements Sorter {
             }
             // no elements were swapped in the last sweep.
             if (!swapped) {
+                logger.info("Early break point executed because no elements were swapped in the last sweep");
                 break;
             }
         }

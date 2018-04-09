@@ -1,4 +1,4 @@
-package com.m3c.md.display;
+package com.m3c.md.view;
 
 import java.util.Arrays;
 
