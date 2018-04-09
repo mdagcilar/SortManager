@@ -1,6 +1,7 @@
 package com.m3c.md.model;
 
 import com.m3c.md.controller.ElementNotFoundException;
+import com.m3c.md.display.DisplayManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -43,7 +44,10 @@ public class BinaryTreeImpl implements BinaryTree, Sorter {
     }
 
     // Returns the value of the root Node
-    public int getRootElement() {
+    public int getRootElement() throws ElementNotFoundException{
+        if (root == null)
+            throw new ElementNotFoundException();
+
         return root.getValue();
     }
 

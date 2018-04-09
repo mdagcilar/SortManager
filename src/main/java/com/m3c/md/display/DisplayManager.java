@@ -21,7 +21,7 @@ public class DisplayManager {
         System.out.println("Sorted Array: " + Arrays.toString(array));
     }
 
-    public void displayExceptionMessage(String message) {
+    public static void displayExceptionMessage(String message) {
         System.out.println(message);
     }
 }

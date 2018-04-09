@@ -14,7 +14,7 @@ import java.util.List;
 
 public interface BinaryTree {
 
-    int getRootElement();
+    int getRootElement() throws ElementNotFoundException;
 
     int getNumberOfElements();
 

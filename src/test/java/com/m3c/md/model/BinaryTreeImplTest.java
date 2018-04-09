@@ -32,7 +32,7 @@ public class BinaryTreeImplTest {
 
     // Testing the value is correct for the getRootElement() method
     @Test
-    public void getRootElement() {
+    public void getRootElement() throws ElementNotFoundException {
         binaryTree = new BinaryTreeImpl(8);
         assertEquals(8, binaryTree.getRootElement());
     }
@@ -212,5 +212,17 @@ public class BinaryTreeImplTest {
         sorter.sort(arr);
 
         assertEquals("[2, 3, 4, 7, 9]", Arrays.toString(arr));
+    }
+
+    @Test(expected = ElementNotFoundException.class)
+    public void testEmptyConstructor() throws ElementNotFoundException {
+        binaryTree = new BinaryTreeImpl();
+        binaryTree.getRootElement();
+    }
+
+    @Test
+    public void testToString() {
+        binaryTree.toString();
+        assertEquals(binaryTree.toString(), "BinaryTree Sorter");
     }
 }
