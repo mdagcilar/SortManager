@@ -1,4 +1,4 @@
-package com.m3c.md.model;
+package com.m3c.md.model.sorters;
 
 import com.m3c.md.controller.SortFactory;
 import com.m3c.md.model.sorters.SortManagerException;
