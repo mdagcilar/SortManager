@@ -18,6 +18,7 @@ public class MergeSort implements Sorter {
 
     public <T extends Comparable<T>> void sort(T[] inputArray) {
         if (inputArray == null || inputArray.length < 2) return;
+        logger.info("Unsorted Array " + Arrays.toString(inputArray));
 
         int mid = inputArray.length / 2;
         T[] leftArr = Arrays.copyOfRange(inputArray, 0, mid);
@@ -27,6 +28,7 @@ public class MergeSort implements Sorter {
         sort(rightArr);
 
         merge(leftArr, rightArr, inputArray);
+        logger.info("Sorted Array " + Arrays.toString(inputArray));
     }
 
     private <T extends Comparable<T>> void merge(T[] left, T[] right, T[] result) {

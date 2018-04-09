@@ -2,6 +2,9 @@ package com.m3c.md.model.sorters;
 
 import com.m3c.md.model.BinaryTree.BinaryTree;
 import com.m3c.md.model.BinaryTree.BinaryTreeImpl;
+import org.apache.log4j.Logger;
+
+import java.util.Arrays;
 
 /**
  * BinaryTreeSorter
@@ -12,6 +15,8 @@ import com.m3c.md.model.BinaryTree.BinaryTreeImpl;
  */
 
 public class BinaryTreeSorter implements Sorter {
+
+    private static org.apache.log4j.Logger logger = Logger.getLogger(BubbleSort.class);
 
     /**
      * Sorts elements using getSortedTreeAsc() and converts it to an array.
@@ -24,6 +29,7 @@ public class BinaryTreeSorter implements Sorter {
     @Override
     public <T extends Comparable<T>> void sort(T[] elements) {
         if (elements.length == 0) return;
+        logger.info("Unsorted Array " + Arrays.toString(elements));
 
         BinaryTree binaryTree = new BinaryTreeImpl((Integer) elements[0]);
 
@@ -36,6 +42,7 @@ public class BinaryTreeSorter implements Sorter {
         binaryTree.addElements(elementsToAdd);
 
         binaryTree.getSortedTreeAsc().toArray(elements);
+        logger.info("Sorted Array " + Arrays.toString(elements));
     }
 
     @Override

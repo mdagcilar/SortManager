@@ -2,6 +2,8 @@ package com.m3c.md.model.sorters;
 
 import org.apache.log4j.Logger;
 
+import java.util.Arrays;
+
 /**
  * Implementation of the QuickSort algorithm
  * <p>
@@ -20,6 +22,7 @@ public class QuickSort implements Sorter {
 
     @Override
     public <T extends Comparable<T>> void sort(T[] t) {
+        logger.info("Unsorted Array " + Arrays.toString(t));
         sort(t, 0, t.length - 1);
     }
 
@@ -31,6 +34,7 @@ public class QuickSort implements Sorter {
             sort(inputArray, low, pi - 1);
             sort(inputArray, pi + 1, high);
         }
+        logger.info("Sorted Array " + Arrays.toString(inputArray));
     }
 
     private <T extends Comparable<T>> int partition(T[] inputArray, int low, int high) {
