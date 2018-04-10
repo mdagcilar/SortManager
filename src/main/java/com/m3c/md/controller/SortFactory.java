@@ -1,5 +1,6 @@
 package com.m3c.md.controller;
 
+import com.m3c.md.model.Constants;
 import com.m3c.md.model.sorters.*;
 
 import java.io.FileReader;
@@ -16,11 +17,8 @@ import java.util.Properties;
 
 public class SortFactory {
 
-    private static final String TYPE_NOT_FOUND = "Sorry - this sorter type is not available";
-    private static final String CONFIG_ERROR = "Sorry - Configuration file not found";
-
     public static Sorter getInstance() throws SortManagerException {
-        try (FileReader fr = new FileReader("resources/factory.properties")) {
+        try (FileReader fr = new FileReader(Constants.FACTORY_PROPERTIES_FILE)) {
 
             Properties properties = new Properties();
             properties.load(fr);
@@ -37,10 +35,10 @@ public class SortFactory {
                 case "binarytree":
                     return new BinaryTreeSorter();
                 default:
-                    throw new SortManagerException(TYPE_NOT_FOUND);
+                    throw new SortManagerException(Constants.TYPE_NOT_FOUND);
             }
         } catch (IOException e) {
-            throw new SortManagerException(CONFIG_ERROR);
+            throw new SortManagerException(Constants.CONFIG_ERROR);
         }
     }
 }

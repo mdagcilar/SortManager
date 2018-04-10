@@ -1,8 +1,5 @@
 package com.m3c.md.model.BinaryTree;
 
-import com.m3c.md.model.BinaryTree.BinaryTree;
-import com.m3c.md.model.BinaryTree.BinaryTreeImpl;
-import com.m3c.md.model.BinaryTree.ElementNotFoundException;
 import org.junit.Before;
 import org.junit.Test;
 

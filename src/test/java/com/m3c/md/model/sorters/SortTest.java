@@ -1,9 +1,6 @@
 package com.m3c.md.model.sorters;
 
 import com.m3c.md.controller.SortFactory;
-import com.m3c.md.model.sorters.SortManagerException;
-import com.m3c.md.model.sorters.BinaryTreeSorter;
-import com.m3c.md.model.sorters.Sorter;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;

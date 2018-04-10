@@ -74,3 +74,5 @@
 09-04-2018 23:09:22 INFO [main] BinaryTreeSorter - Sorted Array [3, 14, 35, 39, 44, 56, 68, 71, 73, 86]
 09-04-2018 23:09:22 INFO [main] BinaryTreeSorter - Unsorted Array [23, 10, 3, 10, 4, 9, 12]
 09-04-2018 23:09:22 INFO [main] BinaryTreeSorter - Sorted Array [3, 4, 9, 10, 10, 12, 23]
+10-04-2018 21:45:50 INFO [main] BinaryTreeSorter - Unsorted Array [8, 10, 3, 69, 68, 21, 64, 84, 11, 42]
+10-04-2018 21:45:50 INFO [main] BinaryTreeSorter - Sorted Array [3, 8, 10, 11, 21, 42, 64, 68, 69, 84]

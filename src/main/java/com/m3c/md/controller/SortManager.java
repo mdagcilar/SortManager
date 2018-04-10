@@ -18,9 +18,7 @@ import java.util.Random;
 
 public class SortManager {
 
-
     public void sortArray() {
-        DisplayManager displayManager = new DisplayManager();
 
         try {
             Sorter sorter = SortFactory.getInstance();
@@ -31,7 +29,7 @@ public class SortManager {
 
             DisplayManager.displaySortedArray(arrayToSort);
         } catch (SortManagerException e) {
-            displayManager.displayExceptionMessage(e.getMessage());
+            DisplayManager.displayExceptionMessage(e.getMessage());
         }
     }
 

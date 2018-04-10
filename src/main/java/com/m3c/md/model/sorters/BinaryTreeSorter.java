@@ -16,7 +16,7 @@ import java.util.Arrays;
 
 public class BinaryTreeSorter implements Sorter {
 
-    private static org.apache.log4j.Logger logger = Logger.getLogger(BubbleSort.class);
+    private static org.apache.log4j.Logger logger = Logger.getLogger(BinaryTreeSorter.class);
 
     /**
      * Sorts elements using getSortedTreeAsc() and converts it to an array.
